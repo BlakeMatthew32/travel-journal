@@ -83,6 +83,7 @@ body {
 
 .card--location_pin {
   margin-right: .5em;
+  font-size: 1.22rem;
 }
 
 .card--maps_link > a {
