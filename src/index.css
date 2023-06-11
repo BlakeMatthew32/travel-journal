@@ -14,56 +14,111 @@
   -webkit-text-size-adjust: 100%;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* header styles */
+
+.header {
+  /* width: 100vw; */
+  background-color: #F55A5A;
+  padding: 1.8em;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+.header--title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
 }
-button:hover {
-  border-color: #646cff;
+
+.header--title_icon {
+  font-size: 2rem;
+  margin-right: .5em;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+
+/* card styles */
+
+.main-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2.5em;
+  margin-top: 4em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+  gap: 3em;
+}
+
+.card {
+  display: flex;
+  gap: 2.2em;
+  letter-spacing: .15px;
+}
+
+.card--image {
+  width: 180px;
+  aspect-ratio: .75/1;
+  object-fit: cover;
+  border-radius: .5em;
+}
+
+.card--content {
+  place-self: center;
+}
+
+.card--location_info{
+  text-transform: uppercase;
+  font-size: 0.825rem;
+  letter-spacing: 2px;
+}
+
+.card--location_pin {
+  margin-right: .5em;
+}
+
+.card--maps_link > a {
+  display: inline-block;
+  text-transform: initial;
+  color: #918E9B;
+  margin-left: 1.4em;
+  letter-spacing: 1px;
+  transition: all .1s ease-in-out;
+}
+
+.card--maps_link > a:hover {
+  color: #bebaca;
+  transform: scaleX(1.1);
+  margin-left: 1.8em;
+}
+
+
+.card--title {
+  margin: -.5em 0 .2em;
+  /* font-size: 1.5rem; */
+}
+
+.card--dates {
+  font-size: 0.625rem;
+  font-weight: 700;
+}
+
+.card--desc {
+  font-size: 0.875rem;
+  max-width: 500px;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
   }
 }
