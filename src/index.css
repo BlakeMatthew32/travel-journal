@@ -81,6 +81,39 @@ body {
   box-shadow: 1.3px 1.3px 2px 1px rgba(12, 32, 50, 0.5);
 }
 
+/* new journal entry form */
+
+.form_comp--container {
+  display: grid;
+  place-content: center;
+  background-color: rgba(36, 36, 36, 0.8);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  margin: 0 auto;
+
+}
+
+.form_comp--inner {
+  background-color: #213547;
+  padding: 2em 3em;
+  border-radius: 1em;
+  width: 50vw;
+  height: 70vh;
+}
+
+.form_comp--form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5em;
+  border: 1px solid red;
+}
+
+.form_comp--close{
+  margin: 0 0 0 auto;
+}
+
 /* card styles */
 
 .main-container {
@@ -158,3 +191,5 @@ body {
     background-color: #ffffff;
   }
 }
+
+
