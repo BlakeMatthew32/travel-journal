@@ -4,6 +4,7 @@ import Header from './components/Header'
 import Card from './components/Card'
 import data from './data/data.jsx'
 import NoLogs from './components/NoLogs'
+import TravelLogForm from './components/TravelLogForm'
 
 function App() {
   const [travelLogs, setTravelLogs] = useState([])
@@ -22,7 +23,11 @@ function App() {
   })
 
   function openLogForm() {
-    console.log('clicked')
+    setLogFormOpen(true)
+  }
+
+  function handleFormClose() {
+    setLogFormOpen(false)
   }
 
   return (
@@ -31,6 +36,7 @@ function App() {
       {travelLogs < 1 ? <NoLogs handleClick={openLogForm}/> : 
         <>
           <Header handleClick={openLogForm}/>
+          {logFormOpen && <TravelLogForm handleClose={handleFormClose} />}
           <main className='main-container'>
             {cardElements}
           </main>
