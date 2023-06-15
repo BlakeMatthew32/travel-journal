@@ -26,12 +26,32 @@ body {
   min-height: 100vh;
 }
 
+/* no journal entries */
+
+.no_logs{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+.no_logs--heading {
+  font-size: 2.5rem;
+}
+
+.no_logs--btn {
+  font-size: 1.5rem;
+}
+
 /* header styles */
 
 .header {
-  /* width: 100vw; */
+  display: flex;
+  justify-content: space-between;
   background-color: #F55A5A;
-  padding: 1.8em;
+  padding: 1.8em 5%;
 }
 
 .header--title {
@@ -39,6 +59,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0;
+  font-size: 1.625rem;
 }
 
 .header--title_icon {
@@ -46,10 +67,24 @@ body {
   margin-right: .5em;
 }
 
+.header--btn {
+  font-size: 1rem;
+}
+
+.btn {
+  font-weight: 600;
+  cursor: pointer;
+  background-color: rgb(33, 53, 71);
+  border: none;
+  border-radius: 8px;
+  padding: 0.5em 1.3em;
+  box-shadow: 1.3px 1.3px 2px 1px rgba(12, 32, 50, 0.5);
+}
+
 /* card styles */
 
 .main-container {
-  max-width: 1280px;
+  max-width: 1580px;
   margin: 0 auto 4em;
   padding: 0 2.5em;
   margin-top: 4em;
