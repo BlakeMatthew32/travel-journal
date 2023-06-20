@@ -10,7 +10,7 @@ export default function Card(props) {
                     <span className="card--location_pin">📍</span>
                     {props.location}
                     <span className="card--maps_link">
-                        <a href={props.googleMapsUrl} target="_blank">View on Google Maps</a>
+                        {/* <a href={props.googleMapsUrl} target="_blank">View on Google Maps</a> */}
                     </span>
                 </p>
                 <h2 className="card--title">{props.title}</h2>

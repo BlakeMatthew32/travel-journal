@@ -67,20 +67,6 @@ body {
   margin-right: .5em;
 }
 
-.header--btn {
-  font-size: 1rem;
-}
-
-.btn {
-  font-weight: 600;
-  cursor: pointer;
-  background-color: rgb(33, 53, 71);
-  border: none;
-  border-radius: 8px;
-  padding: 0.5em 1.3em;
-  box-shadow: 1.3px 1.3px 2px 1px rgba(12, 32, 50, 0.5);
-}
-
 /* new journal entry form */
 
 .form_comp--container {
@@ -95,22 +81,56 @@ body {
 }
 
 .form_comp--inner {
+  position: relative;
+  min-width: 80%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: #213547;
-  padding: 2em 3em;
+  padding: 2em 4em 4em;
   border-radius: 1em;
-  width: 50vw;
-  height: 70vh;
 }
 
 .form_comp--form {
+  width: 100%;
+  margin-top: 2em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 1.5em;
-  border: 1px solid red;
 }
 
-.form_comp--close{
+.form_comp--form input,
+.form_comp--form > textarea {
+  padding: 0.5em 0.7em;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  border: none;
+  background-color: #242424;
+  color: #fff;
+}
+
+.form_comp--date_container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form_comp--form label {
+  display: inline-block;
+  width: 90px;
+}
+
+.form_comp--form > textarea {
+  resize: vertical;
+  max-height: 100px;
+  width: 100%;
+}
+
+.form_comp--close {
+  display: block;
   margin: 0 0 0 auto;
 }
 
@@ -193,3 +213,23 @@ body {
 }
 
 
+/* utilities */
+
+.btn {
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5em 1.3em;
+  box-shadow: 1.3px 1.3px 2px 1px rgba(12, 32, 50, 0.5);
+}
+
+.btn_dark {
+  background-color: rgb(33, 53, 71);
+}
+
+.btn_light {
+  background-color: rgb(240, 240, 240);
+  color: black;
+}

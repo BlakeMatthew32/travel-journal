@@ -7,7 +7,7 @@ export default function Header({handleClick}) {
     return (
         <header className="header">
             <h3 className="header--title"><span className="header--title_icon">🌍</span>My Travel Journal</h3>
-            <button className="btn header--btn" onClick={handleClick} >Add a Journal entry</button>
+            <button className="btn btn_dark header--btn" onClick={handleClick} >Add a Journal entry</button>
         </header>
     )
 }
