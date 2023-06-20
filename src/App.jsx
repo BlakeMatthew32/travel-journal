@@ -43,9 +43,14 @@ function App() {
 
   function handleFormChange(event) {
     const {name, value, type, files} = event.target
+
     let propertyValue
-    if (type === "file") {
-      propertyValue = files
+
+    if(type === "file") {
+      propertyValue = URL.createObjectURL(files[0])
+      console.log(propertyValue)
+    } else {
+      propertyValue = value
     }
 
     console.log(event.target)
@@ -53,12 +58,12 @@ function App() {
     setFormData(prevFormData => (
         {
             ...prevFormData,
-            [name]: value
+            [name]: propertyValue
         }
     ))
   }
 
-  function handleFormSubmit(event, imageUrlData) {
+  function handleFormSubmit(event) {
     event.preventDefault()
 
     
@@ -66,8 +71,7 @@ function App() {
     setTravelLogs(prevLogs => {
       prevLogs.unshift(
         {
-          ...formData,
-          imageUrl: selectedImageUrl
+          ...formData
         }
       )
       return prevLogs

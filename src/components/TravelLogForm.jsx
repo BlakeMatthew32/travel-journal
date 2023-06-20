@@ -3,15 +3,15 @@ import { useState, useEffect } from "react";
 
 export default function TravelLogForm({ formData, handleClose, handleChange, handleSubmit }) {
 
-    const [selectedImage, setSelectedImage] = useState(null)
-    const [selectedImageURL, setSelectedImageURL] = useState(null)
-    console.log(selectedImageURL)
+    // const [selectedImage, setSelectedImage] = useState(null)
+    // const [selectedImageURL, setSelectedImageURL] = useState(null)
+    // console.log(selectedImageURL)
 
-    useEffect(() => {
-        if(selectedImage) {
-            setSelectedImageURL(URL.createObjectURL(selectedImage))
-        }
-    }, [selectedImage])
+    // useEffect(() => {
+    //     if(selectedImage) {
+    //         setSelectedImageURL(URL.createObjectURL(selectedImage))
+    //     }
+    // }, [selectedImage])
 
     // const [formData, setFormData] = useState({
     //     title: "",
@@ -23,10 +23,10 @@ export default function TravelLogForm({ formData, handleClose, handleChange, han
     //     imageUrl: ""
     // })
 
-    function handleImageChange(event) {
-        const {name, value, type, files} = event.target
-        setSelectedImage(files[0])
-    }
+    // function handleImageChange(event) {
+    //     const {name, value, type, files} = event.target
+    //     setSelectedImage(files[0])
+    // }
 
     return (
         <div className="form_comp--container">
@@ -45,11 +45,10 @@ export default function TravelLogForm({ formData, handleClose, handleChange, han
                         <input type="date" name="endDate" id="endDate" value={formData.endDate} onChange={handleChange} />
                     </div>
                     <textarea placeholder="Description" type="text" name="description" maxLength="250" value={formData.description} onChange={handleChange} />
-                    <input type="file" name="imageUrl" onChange={handleImageChange} />
-                    <button className="btn btn_light" onClick={() => handleSubmit(selectedImageURL)} >Add to Travel Journal</button>
+                    <input type="file" name="imageUrl" onChange={handleChange} />
+                    <button className="btn btn_light" onClick={handleSubmit} >Add to Travel Journal</button>
                 </form>
             </div>
-            {selectedImageURL && <img src={selectedImageURL} /> }
         </div>
     )
 }
